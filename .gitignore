@@ -1,0 +1,11 @@
+
+# Secrets and local environment
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+db.sqlite3
+*.sqlite3
+node_modules/
+dist/

@@ -1,0 +1,17 @@
+Q: What are the hospital working hours?
+A: CareFlow Hospital operates from 8:00 AM to 8:00 PM Monday to Saturday.
+
+Q: How can I book an appointment?
+A: Patients can book an appointment through the CareFlow patient portal or by contacting the hospital reception.
+
+Q: Can I cancel my appointment?
+A: Yes. Patients can cancel a scheduled appointment through the patient portal.
+
+Q: Can I reschedule my appointment?
+A: Yes. Patients can request a different available date and time through the patient portal.
+
+Q: What should I bring to my appointment?
+A: Patients should bring a valid identification document and any relevant previous medical reports.
+
+Q: Can I ask the AI assistant for a diagnosis?
+A: No. The CareFlow AI assistant does not diagnose medical conditions or prescribe medicines. It provides appointment and general hospital information.

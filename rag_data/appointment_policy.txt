@@ -1,0 +1,17 @@
+CareFlow Hospital Appointment Policy
+
+1. Appointments are subject to doctor availability.
+
+2. Patients should arrive at least 15 minutes before their scheduled appointment.
+
+3. A scheduled appointment can be cancelled before the appointment time.
+
+4. Appointments can be rescheduled to another available slot.
+
+5. A rescheduled appointment receives the newly selected date and time.
+
+6. Patients should verify the doctor, date, and time before confirming an appointment.
+
+7. Appointment information is handled through the hospital appointment management system.
+
+8. The AI assistant can help with appointment-related communication but cannot make medical decisions.

@@ -1,0 +1,7 @@
+{"text":"I want to book a cardiology appointment tomorrow at 15:00","intent":"BOOK_APPOINTMENT","department":"Cardiology","date":"tomorrow","time":"15:00"}
+{"text":"Can I move my dermatology appointment to Friday?","intent":"RESCHEDULE_APPOINTMENT","department":"Dermatology","date":"Friday","time":null}
+{"text":"Please cancel my appointment","intent":"CANCEL_APPOINTMENT","department":null,"date":null,"time":null}
+{"text":"Is a cardiologist available tomorrow?","intent":"DOCTOR_AVAILABILITY","department":"Cardiology","date":"tomorrow","time":null}
+{"text":"What documents should I bring?","intent":"HOSPITAL_FAQ","department":null,"date":null,"time":null}
+{"text":"Remind me about my appointment","intent":"APPOINTMENT_REMINDER","department":null,"date":null,"time":null}
+{"text":"I have chest pain and cannot breathe","intent":"EMERGENCY","department":null,"date":null,"time":null}

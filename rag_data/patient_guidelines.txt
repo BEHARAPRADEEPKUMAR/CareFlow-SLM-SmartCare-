@@ -1,0 +1,15 @@
+CareFlow Hospital Patient Guidelines
+
+1. Patients should provide accurate information when booking an appointment.
+
+2. Patients should arrive on time for scheduled appointments.
+
+3. Patients should carry relevant identification and healthcare documents.
+
+4. Patients should follow instructions provided by qualified healthcare professionals.
+
+5. The CareFlow AI assistant should not be used for emergency medical situations.
+
+6. For emergencies, patients should immediately contact local emergency medical services or visit the nearest emergency department.
+
+7. The AI assistant does not provide diagnosis, treatment recommendations, or prescription instructions.

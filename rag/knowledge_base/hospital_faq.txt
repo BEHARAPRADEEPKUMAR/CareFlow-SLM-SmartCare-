@@ -1,0 +1,124 @@
+# CAREFLOW HOSPITAL - PATIENT INFORMATION
+
+## ABOUT CAREFLOW HOSPITAL
+
+CareFlow Hospital provides outpatient healthcare services through multiple medical departments. Patients can use CareFlow to find doctors, book appointments, manage appointments, and communicate with the hospital.
+
+## HOSPITAL SERVICES
+
+CareFlow Hospital provides the following services:
+
+1. Cardiology
+2. Dermatology
+3. Orthopedics
+4. General Medicine
+5. Appointment scheduling
+6. Appointment rescheduling
+7. Appointment cancellation
+8. Patient communication
+9. Appointment reminders
+
+## DOCTOR SPECIALIZATIONS
+
+### CARDIOLOGY
+
+The Cardiology department handles heart and cardiovascular-related consultations.
+
+### DERMATOLOGY
+
+The Dermatology department handles skin, hair, and related dermatological consultations.
+
+### ORTHOPEDICS
+
+The Orthopedics department handles bone, joint, muscle, and musculoskeletal consultations.
+
+### GENERAL MEDICINE
+
+The General Medicine department provides general medical consultations and primary healthcare services.
+
+## APPOINTMENT BOOKING
+
+Patients can book an appointment through the CareFlow AI assistant. The assistant can identify the requested department, doctor, date, and time and then search available appointment slots.
+
+Patients must be authenticated before an appointment can be created.
+
+## APPOINTMENT RESCHEDULING
+
+Patients can reschedule an existing appointment when a suitable new appointment slot is available.
+
+The system checks whether the requested doctor already has an appointment at the requested date and time.
+
+## APPOINTMENT CANCELLATION
+
+Patients can cancel their appointments through the CareFlow appointment management system.
+
+Cancelled appointments are retained in the system for record purposes and are not permanently deleted.
+
+## DOCTOR APPOINTMENTS
+
+Doctors can view appointments assigned to them.
+
+Doctors can confirm scheduled appointments, mark completed appointments, or cancel appointments.
+
+## EMERGENCY SAFETY
+
+CareFlow AI is designed for appointment and patient communication workflows. It does not replace emergency medical services.
+
+Patients experiencing a medical emergency should contact their local emergency service or visit the nearest emergency department.
+
+## MEDICAL ADVICE
+
+CareFlow AI should not independently diagnose medical conditions or prescribe medication.
+
+For medical diagnosis, treatment decisions, or medication advice, patients should consult a qualified healthcare professional.
+
+## PATIENT COMMUNICATION
+
+Patients can use the CareFlow AI assistant for appointment-related questions and hospital information.
+
+The AI assistant can provide information from the hospital knowledge base using retrieval-augmented generation (RAG).
+
+## APPOINTMENT REMINDERS
+
+CareFlow can provide appointment reminder functionality for upcoming appointments.
+
+## PATIENT DATA
+
+CareFlow should use authenticated access when handling patient-specific appointment information.
+
+Patient information should not be exposed to unauthorized users.
+
+## LOCATION AND OPERATING HOURS
+
+CareFlow Hospital is associated with Hyderabad, Telangana, India.
+
+Exact street address: Not currently configured in the hospital knowledge base. Do not invent or guess a street address.
+
+Operating hours: CareFlow Hospital is open 24 hours a day, 7 days a week (24/7).
+
+Hospital phone number: 9999999999.
+
+When asked about the hospital's operating hours, state that it is open 24/7.
+
+When asked for the hospital phone number, provide 9999999999.
+
+When asked for the exact street address, explain that the information is not currently available in the configured hospital knowledge base.
+
+## HOSPITAL INFORMATION ACCURACY
+
+Answer hospital-specific questions using the configured hospital knowledge base or verified application data.
+
+The configured hospital information is:
+
+- **Location:** Hyderabad, Telangana, India
+- **Operating hours:** 24 hours a day, 7 days a week (24/7)
+- **Phone number:** 9999999999
+- **Exact street address:** Not configured
+
+Do not invent doctor names, additional contact numbers, department availability, addresses, or appointment availability.
+
+If requested information is unavailable, clearly explain that it is not currently configured.
+
+Appointment availability must be retrieved from the application's appointment system rather than assumed from the knowledge base.
+
+CareFlow AI must not expose patient-specific information to unauthorized users.

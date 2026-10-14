@@ -1,0 +1,116 @@
+[
+  {
+    "source": "hospital_faq.txt",
+    "section": "INTRODUCTION",
+    "chunk_index": 0,
+    "text": "# CAREFLOW HOSPITAL - PATIENT INFORMATION"
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "ABOUT CAREFLOW HOSPITAL",
+    "chunk_index": 1,
+    "text": "## ABOUT CAREFLOW HOSPITAL CareFlow Hospital provides outpatient healthcare services through multiple medical departments. Patients can use CareFlow to find doctors, book appointments, manage appointments, and communicate with the hospital."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "HOSPITAL SERVICES",
+    "chunk_index": 2,
+    "text": "## HOSPITAL SERVICES CareFlow Hospital provides the following services: 1. Cardiology 2. Dermatology 3. Orthopedics 4. General Medicine 5. Appointment scheduling 6. Appointment rescheduling 7. Appointment cancellation 8. Patient communication 9. Appointment reminders"
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "DOCTOR SPECIALIZATIONS",
+    "chunk_index": 3,
+    "text": "## DOCTOR SPECIALIZATIONS"
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "CARDIOLOGY",
+    "chunk_index": 4,
+    "text": "### CARDIOLOGY The Cardiology department handles heart and cardiovascular-related consultations."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "DERMATOLOGY",
+    "chunk_index": 5,
+    "text": "### DERMATOLOGY The Dermatology department handles skin, hair, and related dermatological consultations."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "ORTHOPEDICS",
+    "chunk_index": 6,
+    "text": "### ORTHOPEDICS The Orthopedics department handles bone, joint, muscle, and musculoskeletal consultations."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "GENERAL MEDICINE",
+    "chunk_index": 7,
+    "text": "### GENERAL MEDICINE The General Medicine department provides general medical consultations and primary healthcare services."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "APPOINTMENT BOOKING",
+    "chunk_index": 8,
+    "text": "## APPOINTMENT BOOKING Patients can book an appointment through the CareFlow AI assistant. The assistant can identify the requested department, doctor, date, and time and then search available appointment slots. Patients must be authenticated before an appointment can be created."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "APPOINTMENT RESCHEDULING",
+    "chunk_index": 9,
+    "text": "## APPOINTMENT RESCHEDULING Patients can reschedule an existing appointment when a suitable new appointment slot is available. The system checks whether the requested doctor already has an appointment at the requested date and time."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "APPOINTMENT CANCELLATION",
+    "chunk_index": 10,
+    "text": "## APPOINTMENT CANCELLATION Patients can cancel their appointments through the CareFlow appointment management system. Cancelled appointments are retained in the system for record purposes and are not permanently deleted."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "DOCTOR APPOINTMENTS",
+    "chunk_index": 11,
+    "text": "## DOCTOR APPOINTMENTS Doctors can view appointments assigned to them. Doctors can confirm scheduled appointments, mark completed appointments, or cancel appointments."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "EMERGENCY SAFETY",
+    "chunk_index": 12,
+    "text": "## EMERGENCY SAFETY CareFlow AI is designed for appointment and patient communication workflows. It does not replace emergency medical services. Patients experiencing a medical emergency should contact their local emergency service or visit the nearest emergency department."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "MEDICAL ADVICE",
+    "chunk_index": 13,
+    "text": "## MEDICAL ADVICE CareFlow AI should not independently diagnose medical conditions or prescribe medication. For medical diagnosis, treatment decisions, or medication advice, patients should consult a qualified healthcare professional."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "PATIENT COMMUNICATION",
+    "chunk_index": 14,
+    "text": "## PATIENT COMMUNICATION Patients can use the CareFlow AI assistant for appointment-related questions and hospital information. The AI assistant can provide information from the hospital knowledge base using retrieval-augmented generation (RAG)."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "APPOINTMENT REMINDERS",
+    "chunk_index": 15,
+    "text": "## APPOINTMENT REMINDERS CareFlow can provide appointment reminder functionality for upcoming appointments."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "PATIENT DATA",
+    "chunk_index": 16,
+    "text": "## PATIENT DATA CareFlow should use authenticated access when handling patient-specific appointment information. Patient information should not be exposed to unauthorized users."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "LOCATION AND OPERATING HOURS",
+    "chunk_index": 17,
+    "text": "## LOCATION AND OPERATING HOURS CareFlow Hospital is associated with Hyderabad, Telangana, India. Exact street address: Not currently configured in the hospital knowledge base. Do not invent or guess a street address. Operating hours: CareFlow Hospital is open 24 hours a day, 7 days a week (24/7). Hospital phone number: 9999999999. When asked about the hospital's operating hours, state that it is open 24/7. When asked for the hospital phone number, provide 9999999999. When asked for the exact street address, explain that the information is not currently available in the configured hospital knowledge base."
+  },
+  {
+    "source": "hospital_faq.txt",
+    "section": "HOSPITAL INFORMATION ACCURACY",
+    "chunk_index": 18,
+    "text": "## HOSPITAL INFORMATION ACCURACY Answer hospital-specific questions using the configured hospital knowledge base or verified application data. The configured hospital information is: - **Location:** Hyderabad, Telangana, India - **Operating hours:** 24 hours a day, 7 days a week (24/7) - **Phone number:** 9999999999 - **Exact street address:** Not configured Do not invent doctor names, additional contact numbers, department availability, addresses, or appointment availability. If requested information is unavailable, clearly explain that it is not currently configured. Appointment availability must be retrieved from the application's appointment system rather than assumed from the knowledge base. CareFlow AI must not expose patient-specific information to unauthorized users."
+  }
+]

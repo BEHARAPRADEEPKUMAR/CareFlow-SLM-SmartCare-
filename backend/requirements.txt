@@ -1,0 +1,19 @@
+
+# Django REST backend
+Django>=6.1,<7
+djangorestframework>=3.16
+django-cors-headers>=4.7
+psycopg[binary]>=3.2
+python-dotenv>=1.1
+
+# SLM inference and LoRA adapters
+torch>=2.6
+transformers>=4.50
+peft>=0.15
+accelerate>=1.5
+safetensors>=0.5
+
+# RAG embeddings and FAISS retrieval
+numpy>=1.26
+faiss-cpu>=1.9
+sentence-transformers>=4.0

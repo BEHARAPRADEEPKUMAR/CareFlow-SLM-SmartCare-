@@ -1,0 +1,19 @@
+CareFlow Hospital Departments
+
+Cardiology:
+Provides consultation services related to heart and cardiovascular health.
+
+Dermatology:
+Provides consultation services related to skin, hair, and nail concerns.
+
+Orthopedics:
+Provides consultation services related to bones, joints, muscles, and the musculoskeletal system.
+
+General Medicine:
+Provides general medical consultation and routine healthcare services.
+
+Pediatrics:
+Provides healthcare services for infants, children, and adolescents.
+
+ENT:
+Provides consultation services related to the ear, nose, and throat.
