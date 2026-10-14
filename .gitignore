@@ -9,3 +9,17 @@ db.sqlite3
 *.sqlite3
 node_modules/
 dist/
+
+# Local backups
+backend/chatbot/services.py.backup
+backend/chatbot/services.py.bak
+backend/chatbot/services.py.before_booking_fix
+backend/chatbot/services.py.booking_backup
+
+# Large local training checkpoints
+backend/ml/careflow-slm-lora/checkpoint-*/
+slm/careflow-lora/checkpoint-*/
+**/optimizer.pt
+**/scheduler.pt
+**/rng_state.pth
+**/training_args.bin
