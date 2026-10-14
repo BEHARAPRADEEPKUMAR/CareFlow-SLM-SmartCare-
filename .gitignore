@@ -23,3 +23,10 @@ slm/careflow-lora/checkpoint-*/
 **/scheduler.pt
 **/rng_state.pth
 **/training_args.bin
+
+# Generated model checkpoints
+**/checkpoint-*/
+**/training_args.bin
+**/optimizer.pt
+**/scheduler.pt
+**/rng_state.pth
