@@ -1290,7 +1290,7 @@ function HomePage({
             <div className="hero-doctor-portrait-card">
               <img
                 className="hero-doctor-portrait"
-                src={`${import.meta.env.BASE_URL}doctors/dr-ananya-sharma.png`}
+                src={`${import.meta.env.BASE_URL}doctors/female-doctor-hero.png`}
                 alt="Confident female doctor with arms crossed"
                 loading="eager"
               />
