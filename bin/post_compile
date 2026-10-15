@@ -1,0 +1,3 @@
+#!/bin/bash
+export FASTEMBED_CACHE_PATH="$PWD/.fastembed"
+python -c "from fastembed import TextEmbedding; TextEmbedding('sentence-transformers/all-MiniLM-L6-v2')"

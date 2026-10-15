@@ -31,3 +31,4 @@ slm/careflow-lora/checkpoint-*/
 **/scheduler.pt
 **/rng_state.pth
 backend/staticfiles/
+.fastembed/
