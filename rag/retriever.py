@@ -2,7 +2,8 @@ from pathlib import Path
 import json
 
 import faiss
-from sentence_transformers import SentenceTransformer
+import numpy as np
+from fastembed import TextEmbedding
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -12,7 +13,7 @@ VECTOR_DIR = BASE_DIR / "rag" / "vector_store"
 INDEX_PATH = VECTOR_DIR / "hospital.index"
 METADATA_PATH = VECTOR_DIR / "metadata.json"
 
-MODEL_NAME = "all-MiniLM-L6-v2"
+MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 
 class RAGRetriever:
@@ -31,7 +32,7 @@ class RAGRetriever:
 
         print("Loading RAG model...")
 
-        self.model = SentenceTransformer(MODEL_NAME)
+        self.model = TextEmbedding(MODEL_NAME)
 
         self.index = faiss.read_index(
             str(INDEX_PATH)
@@ -50,11 +51,8 @@ class RAGRetriever:
         if not query:
             return []
 
-        query_embedding = self.model.encode(
-            [query],
-            convert_to_numpy=True,
-            normalize_embeddings=True,
-        )
+        query_embedding = np.array(list(self.model.embed([query])), dtype="float32")
+        query_embedding = query_embedding / np.linalg.norm(query_embedding, axis=1, keepdims=True)
 
         scores, indices = self.index.search(
             query_embedding,
