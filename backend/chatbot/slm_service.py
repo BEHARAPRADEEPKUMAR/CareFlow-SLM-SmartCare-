@@ -9,8 +9,30 @@ if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 
 
-from slm.service import generate_structured_output
+import json
+import os
+import urllib.request
 
+SLM_URL = os.getenv("SLM_URL", "").rstrip("/")
+SLM_API_KEY = os.getenv("SLM_API_KEY", "")
+
+if SLM_URL:
+    # Remote model on Azure. No PyTorch needed on this server.
+    def generate_structured_output(message):
+        request = urllib.request.Request(
+            f"{SLM_URL}/predict",
+            data=json.dumps({"message": message}).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": SLM_API_KEY,
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=200) as response:
+            return json.loads(response.read().decode("utf-8"))
+else:
+    # Local model, same behaviour as before.
+    from slm.service import generate_structured_output
 
 # ============================================================
 # DEPARTMENT ALIASES
