@@ -1108,6 +1108,9 @@ function PublicNavbar({
   onPatientLogin,
   onDoctorLogin,
 }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="public-navbar">
 
@@ -1127,19 +1130,30 @@ function PublicNavbar({
         </div>
       </div>
 
-      <nav className="public-nav">
+      <nav className={`public-nav${menuOpen ? " is-open" : ""}`}>
 
-        <a href="#services">
+        <a href="#services" onClick={closeMenu}>
           Services
         </a>
 
-        <a href="#specializations">
+        <a href="#specializations" onClick={closeMenu}>
           Specializations
         </a>
 
-        <a href="#doctors">
+        <a href="#doctors" onClick={closeMenu}>
           Doctors
         </a>
+
+        <button
+          type="button"
+          className="nav-menu-doctor"
+          onClick={() => {
+            closeMenu();
+            onDoctorLogin();
+          }}
+        >
+          Doctor Sign In
+        </button>
 
       </nav>
 
@@ -1157,6 +1171,18 @@ function PublicNavbar({
           onClick={onPatientLogin}
         >
           Patient Sign In
+        </button>
+
+        <button
+          type="button"
+          className={`nav-menu-toggle${menuOpen ? " is-open" : ""}`}
+          aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
         </button>
 
       </div>
@@ -1290,7 +1316,7 @@ function HomePage({
             <div className="hero-doctor-portrait-card">
               <img
                 className="hero-doctor-portrait"
-                src={`${import.meta.env.BASE_URL}doctors/female-doctor-hero.png`}
+                src={`${import.meta.env.BASE_URL}doctors/dr-ananya-sharma.png`}
                 alt="Confident female doctor with arms crossed"
                 loading="eager"
               />
@@ -9720,5 +9746,122 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   }
 }
 
+
+
+/* =========================================================
+   MOBILE + TABLET RESPONSIVE PATCH
+   ========================================================= */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-x: clip; }
+img, svg, video, canvas { max-width: 100%; }
+button, a, input, select, textarea { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+[id] { scroll-margin-top: 84px; }
+
+/* hamburger + in-menu doctor button: hidden on desktop */
+.nav-menu-toggle { display: none; }
+.nav-menu-doctor { display: none; }
+
+/* ---------- tablets and phones ---------- */
+@media (max-width: 850px) {
+  .public-navbar { gap: 10px; }
+
+  .nav-actions { margin-left: auto; align-items: center; }
+
+  .nav-menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(30, 76, 102, 0.28);
+  }
+  .nav-menu-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background: #a5c0cd;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .nav-menu-toggle.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .nav-menu-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  .public-nav.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 6px 5% 14px;
+    background: rgba(3, 15, 27, 0.98);
+    border-bottom: 1px solid rgba(102, 173, 200, 0.18);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+  .public-nav.is-open a,
+  .public-nav.is-open .nav-menu-doctor {
+    display: block;
+    width: 100%;
+    padding: 15px 4px;
+    border-bottom: 1px solid rgba(102, 173, 200, 0.1);
+    font-size: 15px;
+    text-align: left;
+    color: #a5c0cd;
+    background: none;
+    cursor: pointer;
+  }
+  .public-nav.is-open .nav-menu-doctor { border-bottom: 0; font-weight: 700; color: #32ded3; }
+
+  /* inputs must be 16px or iPhones zoom the page on focus */
+  input, textarea, select,
+  .auth-form input,
+  .chat-input-area input { font-size: 16px !important; }
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 650px) {
+  /* Doctor Sign In moves into the menu (the navbar button is hidden) */
+  .nav-menu-doctor { display: block; }
+  .brand > div:last-child span { display: none; }
+  .brand-mark { width: 36px; height: 36px; font-size: 22px; }
+  .nav-login-button, .nav-primary-button { font-size: 12px; padding: 11px 13px; white-space: nowrap; }
+
+  .hero-section { padding: 50px 20px 60px; min-height: 0; }
+  .hero-content h1 { font-size: clamp(32px, 10vw, 45px); line-height: 1.05; letter-spacing: -1.2px; }
+  .hero-buttons { width: 100%; }
+  .hero-primary, .hero-secondary { width: 100%; }
+  .hero-trust span { font-size: 11px; }
+  .hero-trust strong { font-size: 18px; }
+
+  .auth-intro h1 { font-size: clamp(30px, 9vw, 42px); }
+  .auth-card { padding: 20px 16px; }
+
+  .doctor-table-wrapper { -webkit-overflow-scrolling: touch; }
+
+  .dashboard-nav-button, .doctor-dashboard-tabs button { font-size: 12px; }
+}
+
+/* ---------- small phones (360px and below) ---------- */
+@media (max-width: 380px) {
+  .public-section { padding: 50px 14px; }
+  .dashboard-main, .doctor-dashboard-shell { padding: 12px 10px; }
+  .nav-primary-button { padding: 10px 11px; font-size: 11px; }
+}
+
+/* ---------- touch devices: comfortable tap size ---------- */
+@media (pointer: coarse) {
+  .nav-login-button, .nav-primary-button, .dashboard-nav-button,
+  .logout-button, .hero-primary, .hero-secondary,
+  .chat-quick-actions button { min-height: 44px; }
+}
+/* ===== END MOBILE + TABLET PATCH ===== */
 
 `;
