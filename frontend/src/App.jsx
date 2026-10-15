@@ -19,16 +19,16 @@ const USER_KEY = "careflow_user";
    ========================================================= */
 
 const DEMO_DOCTORS = [
-  { id: 1, name: "Arjun Mehta", photo: "/doctors/dr-arjun-mehta.png", department: "Cardiology" },
-  { id: 2, name: "Priya Rao", photo: "/doctors/dr-priya-rao.png", department: "Cardiology" },
-  { id: 3, name: "Ananya Sharma", photo: "/doctors/dr-ananya-sharma.png", department: "Dermatology" },
-  { id: 4, name: "Vikram Singh", photo: "/doctors/dr-vikram-singh.png", department: "Neurology" },
-  { id: 5, name: "Rahul Verma", photo: "/doctors/dr-rahul-verma.png", department: "Orthopedics" },
-  { id: 6, name: "Kiran Reddy", photo: "/doctors/kiran-reddy.png", department: "General Medicine" },
-  { id: 7, name: "Sneha Sharma", photo: "/doctors/sneha-sharma.png", department: "Pulmonology" },
-  { id: 8, name: "Neha Patel", photo: "/doctors/neha-patel.png", department: "Endocrinology" },
-  { id: 9, name: "Aditya Rao", photo: "/doctors/aditya-rao.png", department: "Gastroenterology / Hepatology" },
-  { id: 10, name: "Meera Nair", photo: "/doctors/meera-nair.png", department: "Infectious Disease" },
+  { id: 1, name: "Arjun Mehta", photo: `${import.meta.env.BASE_URL}doctors/dr-arjun-mehta.png`, department: "Cardiology" },
+  { id: 2, name: "Priya Rao", photo: `${import.meta.env.BASE_URL}doctors/dr-priya-rao.png`, department: "Cardiology" },
+  { id: 3, name: "Ananya Sharma", photo: `${import.meta.env.BASE_URL}doctors/dr-ananya-sharma.png`, department: "Dermatology" },
+  { id: 4, name: "Vikram Singh", photo: `${import.meta.env.BASE_URL}doctors/dr-vikram-singh.png`, department: "Neurology" },
+  { id: 5, name: "Rahul Verma", photo: `${import.meta.env.BASE_URL}doctors/dr-rahul-verma.png`, department: "Orthopedics" },
+  { id: 6, name: "Kiran Reddy", photo: `${import.meta.env.BASE_URL}doctors/kiran-reddy.png`, department: "General Medicine" },
+  { id: 7, name: "Sneha Sharma", photo: `${import.meta.env.BASE_URL}doctors/sneha-sharma.png`, department: "Pulmonology" },
+  { id: 8, name: "Neha Patel", photo: `${import.meta.env.BASE_URL}doctors/neha-patel.png`, department: "Endocrinology" },
+  { id: 9, name: "Aditya Rao", photo: `${import.meta.env.BASE_URL}doctors/aditya-rao.png`, department: "Gastroenterology / Hepatology" },
+  { id: 10, name: "Meera Nair", photo: `${import.meta.env.BASE_URL}doctors/meera-nair.png`, department: "Infectious Disease" },
 ];
 
 /* =========================================================
@@ -1290,7 +1290,7 @@ function HomePage({
             <div className="hero-doctor-portrait-card">
               <img
                 className="hero-doctor-portrait"
-                src="/doctors/dr-ananya-sharma.png"
+                src={`${import.meta.env.BASE_URL}doctors/dr-ananya-sharma.png`}
                 alt="Confident female doctor with arms crossed"
                 loading="eager"
               />
@@ -2328,7 +2328,7 @@ function DashboardTopbar({
                     (user?.name || "")
                       .toLowerCase()
                       .includes(doctor.name.toLowerCase())
-                  )?.photo || "/doctors/dr-arjun-mehta.png"
+                  )?.photo || `${import.meta.env.BASE_URL}doctors/dr-arjun-mehta.png`
                 }
                 alt={`Dr. ${user?.name || "Doctor"}`}
                 onError={(event) => {
@@ -4766,7 +4766,7 @@ function DoctorDashboard({
           </div>
           <div className="doctor-welcome-avatar doctor-welcome-photo" aria-label={`Profile photo of Dr. ${user?.name || "Doctor"}`}>
             <img
-              src={DEMO_DOCTORS.find((doctor) => (user?.name || "").toLowerCase().includes(doctor.name.toLowerCase()))?.photo || "/doctors/dr-arjun-mehta.png"}
+              src={DEMO_DOCTORS.find((doctor) => (user?.name || "").toLowerCase().includes(doctor.name.toLowerCase()))?.photo || `${import.meta.env.BASE_URL}doctors/dr-arjun-mehta.png`}
               alt={`Dr. ${user?.name || "Doctor"}`}
               onError={(event) => { event.currentTarget.style.display = "none"; event.currentTarget.parentElement.classList.add("doctor-photo-fallback"); event.currentTarget.parentElement.insertAdjacentText("afterbegin", (user?.name || "DR").split(" ").map((part) => part[0]).join("").slice(0, 2)); }}
             />
